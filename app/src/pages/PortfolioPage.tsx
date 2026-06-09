@@ -6,18 +6,18 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const portfolioImages = [
-  { src: '/assets/portfolio-1.jpg', alt: 'Haldi ceremony candid moment', title: 'Haldi Ceremony' },
-  { src: '/assets/portfolio-2.jpg', alt: 'Beach couple portrait at sunset', title: 'Beach Romance' },
-  { src: '/assets/portfolio-3.jpg', alt: 'Bridal jewelry detail shot', title: 'Bridal Details' },
-  { src: '/assets/portfolio-4.jpg', alt: 'Grand South Indian wedding venue', title: 'Venue Decor' },
-  { src: '/assets/portfolio-5.jpg', alt: 'Emotional kanyadaan ceremony', title: 'Kanyadaan' },
-  { src: '/assets/portfolio-6.jpg', alt: 'Bridesmaids celebrating', title: 'Bridal Party' },
-  { src: '/assets/portfolio-7.jpg', alt: 'Groom baraat on horse', title: 'Baraat' },
-  { src: '/assets/portfolio-8.jpg', alt: 'Maternity outdoor shoot', title: 'Maternity' },
-  { src: '/assets/portfolio-9.jpg', alt: 'Wedding rings on jasmine', title: 'Ring Ceremony' },
-  { src: '/assets/portfolio-10.jpg', alt: 'Decorated wedding mandapam', title: 'The Mandapam' },
-  { src: '/assets/about-featured-wedding.jpg', alt: 'South Indian wedding couple', title: 'Traditional Wedding' },
-  { src: '/assets/services-featured.jpg', alt: 'Photography team at work', title: 'Behind the Scenes' },
+  { src: 'assets/portfolio-1.jpg', alt: 'Haldi ceremony candid moment', title: 'Haldi Ceremony' },
+  { src: 'assets/portfolio-2.jpg', alt: 'Beach couple portrait at sunset', title: 'Beach Romance' },
+  { src: 'assets/portfolio-3.jpg', alt: 'Bridal jewelry detail shot', title: 'Bridal Details' },
+  { src: 'assets/portfolio-4.jpg', alt: 'Grand South Indian wedding venue', title: 'Venue Decor' },
+  { src: 'assets/portfolio-5.jpg', alt: 'Emotional kanyadaan ceremony', title: 'Kanyadaan' },
+  { src: 'assets/portfolio-6.jpg', alt: 'Bridesmaids celebrating', title: 'Bridal Party' },
+  { src: 'assets/portfolio-7.jpg', alt: 'Groom baraat on horse', title: 'Baraat' },
+  { src: 'assets/portfolio-8.jpg', alt: 'Maternity outdoor shoot', title: 'Maternity' },
+  { src: 'assets/portfolio-9.jpg', alt: 'Wedding rings on jasmine', title: 'Ring Ceremony' },
+  { src: 'assets/portfolio-10.jpg', alt: 'Decorated wedding mandapam', title: 'The Mandapam' },
+  { src: 'assets/about-featured-wedding.jpg', alt: 'South Indian wedding couple', title: 'Traditional Wedding' },
+  { src: 'assets/services-featured.jpg', alt: 'Photography team at work', title: 'Behind the Scenes' },
 ];
 
 export default function PortfolioPage() {

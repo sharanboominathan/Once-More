@@ -7,16 +7,16 @@ import SectionHeader from '../components/SectionHeader';
 gsap.registerPlugin(ScrollTrigger);
 
 const portfolioImages = [
-  { src: '/assets/portfolio-1.jpg', alt: 'Haldi ceremony candid moment', ratio: '3/4' },
-  { src: '/assets/portfolio-2.jpg', alt: 'Beach couple portrait at sunset', ratio: '1/1' },
-  { src: '/assets/portfolio-3.jpg', alt: 'Bridal jewelry detail shot', ratio: '2/3' },
-  { src: '/assets/portfolio-4.jpg', alt: 'Grand South Indian wedding venue', ratio: '1/1' },
-  { src: '/assets/portfolio-5.jpg', alt: 'Emotional kanyadaan ceremony', ratio: '3/4' },
-  { src: '/assets/portfolio-6.jpg', alt: 'Bridesmaids celebrating', ratio: '1/1' },
-  { src: '/assets/portfolio-7.jpg', alt: 'Groom baraat on horse', ratio: '2/3' },
-  { src: '/assets/portfolio-8.jpg', alt: 'Maternity outdoor shoot', ratio: '1/1' },
-  { src: '/assets/portfolio-9.jpg', alt: 'Wedding rings on jasmine', ratio: '3/4' },
-  { src: '/assets/portfolio-10.jpg', alt: 'Decorated wedding mandapam', ratio: '1/1' },
+  { src: 'assets/portfolio-1.jpg', alt: 'Haldi ceremony candid moment', ratio: '3/4' },
+  { src: 'assets/portfolio-2.jpg', alt: 'Beach couple portrait at sunset', ratio: '1/1' },
+  { src: 'assets/portfolio-3.jpg', alt: 'Bridal jewelry detail shot', ratio: '2/3' },
+  { src: 'assets/portfolio-4.jpg', alt: 'Grand South Indian wedding venue', ratio: '1/1' },
+  { src: 'assets/portfolio-5.jpg', alt: 'Emotional kanyadaan ceremony', ratio: '3/4' },
+  { src: 'assets/portfolio-6.jpg', alt: 'Bridesmaids celebrating', ratio: '1/1' },
+  { src: 'assets/portfolio-7.jpg', alt: 'Groom baraat on horse', ratio: '2/3' },
+  { src: 'assets/portfolio-8.jpg', alt: 'Maternity outdoor shoot', ratio: '1/1' },
+  { src: 'assets/portfolio-9.jpg', alt: 'Wedding rings on jasmine', ratio: '3/4' },
+  { src: 'assets/portfolio-10.jpg', alt: 'Decorated wedding mandapam', ratio: '1/1' },
 ];
 
 // Distribute images into columns

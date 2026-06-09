@@ -189,7 +189,7 @@ export default function AboutSection() {
             >
               <img
                 ref={imageRef}
-                src="/assets/about-featured-wedding.jpg"
+                src="assets/about-featured-wedding.jpg"
                 alt="South Indian wedding couple in traditional attire"
                 className="w-full h-full object-cover scale-[1.2]"
               />

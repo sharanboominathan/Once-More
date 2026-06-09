@@ -136,7 +136,7 @@ export default function AboutPage() {
         <div ref={storyRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mt-8">
           <div className="animate-story relative overflow-hidden rounded-xl aspect-[4/5]">
             <img
-              src="/assets/about-featured-wedding.jpg"
+              src="assets/about-featured-wedding.jpg"
               alt="South Indian wedding couple in traditional attire"
               className="w-full h-full object-cover scale-[1.05]"
             />

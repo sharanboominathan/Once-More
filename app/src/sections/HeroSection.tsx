@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 
 export default function HeroSection() {
@@ -126,10 +127,10 @@ export default function HeroSection() {
         muted
         loop
         playsInline
-        poster="/assets/hero-poster.jpg"
+        poster="assets/hero-poster.jpg"
         preload="none"
       >
-        <source src="/assets/hero-wedding-cinematography.mp4" type="video/mp4" />
+        <source src="assets/hero-wedding-cinematography.mp4" type="video/mp4" />
       </video>
 
       {/* Dark Gradient Overlay */}
@@ -146,7 +147,7 @@ export default function HeroSection() {
         ref={grainRef}
         className="absolute inset-0 z-[3] pointer-events-none opacity-0 mix-blend-overlay"
         style={{
-          backgroundImage: 'url(/assets/grain-texture.png)',
+          backgroundImage: 'url(assets/grain-texture.png)',
           backgroundRepeat: 'repeat',
           backgroundSize: '128px 128px',
         }}
@@ -187,12 +188,12 @@ export default function HeroSection() {
         </p>
 
         <div ref={ctaRef} className="mt-8 opacity-0">
-          <a
-            href="#about"
+          <Link
+            to="/#about"
             className="border border-warm-champagne text-warm-champagne px-8 py-4 text-cta uppercase font-body transition-all duration-300 hover:bg-warm-champagne hover:text-deep-burgundy"
           >
             Explore Our Story
-          </a>
+          </Link>
         </div>
       </div>
 

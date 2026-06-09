@@ -213,7 +213,7 @@ export default function ServicesSection() {
           {/* Featured Image */}
           <div ref={imageRef} className="overflow-hidden rounded-xl aspect-[3/4]">
             <img
-              src="/assets/services-featured.jpg"
+              src="assets/services-featured.jpg"
               alt="Wedding photography team at work"
               className="w-full h-full object-cover hover:scale-[1.04] transition-transform duration-600"
             />

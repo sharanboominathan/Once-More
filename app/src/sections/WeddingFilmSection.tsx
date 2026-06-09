@@ -58,7 +58,7 @@ export default function WeddingFilmSection() {
         {/* Background Image */}
         <img
           ref={bgRef}
-          src="/assets/wedding-film-bg.jpg"
+          src="assets/wedding-film-bg.jpg"
           alt="Cinematic wedding ceremony at dusk"
           className="absolute inset-0 w-full h-full object-cover z-[1]"
         />
@@ -128,7 +128,7 @@ export default function WeddingFilmSection() {
             onClick={(e) => e.stopPropagation()}
           >
             <video
-              src="/assets/hero-wedding-cinematography.mp4"
+              src="assets/hero-wedding-cinematography.mp4"
               controls
               autoPlay
               className="w-full h-full"

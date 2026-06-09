@@ -34,7 +34,7 @@ export default function GrainOverlay() {
       aria-hidden="true"
       className="fixed inset-0 z-[9998] pointer-events-none opacity-[0.06] mix-blend-overlay will-change-transform"
       style={{
-        backgroundImage: 'url(/assets/grain-texture.png)',
+        backgroundImage: 'url(assets/grain-texture.png)',
         backgroundRepeat: 'repeat',
         backgroundSize: '128px 128px',
       }}

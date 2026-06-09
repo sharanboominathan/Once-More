@@ -120,17 +120,17 @@ export default function TestimonialsSection() {
             <div className="flex items-center gap-2 mt-8">
               <div className="flex -space-x-4">
                 <img
-                  src="/assets/testimonial-thumb-1.jpg"
+                  src="assets/testimonial-thumb-1.jpg"
                   alt="Happy bride"
                   className="w-16 h-16 rounded-full border-2 border-deep-burgundy object-cover"
                 />
                 <img
-                  src="/assets/testimonial-thumb-2.jpg"
+                  src="assets/testimonial-thumb-2.jpg"
                   alt="Wedding couple"
                   className="w-16 h-16 rounded-full border-2 border-deep-burgundy object-cover"
                 />
                 <img
-                  src="/assets/testimonial-thumb-3.jpg"
+                  src="assets/testimonial-thumb-3.jpg"
                   alt="Wedding ceremony"
                   className="w-16 h-16 rounded-full border-2 border-deep-burgundy object-cover"
                 />
