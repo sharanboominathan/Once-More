@@ -5,7 +5,7 @@ import { useSmoothScroll } from '../contexts/SmoothScrollContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MARQUEE_TEXT = 'WEDDING PHOTOGRAPHY \u2014 ENGAGEMENT SHOOTS \u2014 OUTDOOR SHOOTS \u2014 MODEL SHOOTS \u2014 MATERNITY & BABY SHOWER \u2014 BIRTHDAY CELEBRATIONS \u2014 ';
+const MARQUEE_TEXT = 'HOME \u2014 ABOUT US \u2014 PORTFOLIO \u2014 SERVICES \u2014 WEDDING FILM \u2014 LIVE STREAMING \u2014 CONTACT US \u2014 ';
 
 export default function MarqueeSection() {
   const sectionRef = useRef<HTMLDivElement>(null);

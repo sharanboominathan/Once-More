@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import GrainOverlay from './components/GrainOverlay';
 import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
+import AboutPage from './pages/AboutPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/about" element={<AboutPage />} />
           </Routes>
         </main>
         <Footer />

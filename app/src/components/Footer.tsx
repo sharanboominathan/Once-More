@@ -1,21 +1,15 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const contactButtons = [
-  { label: 'Leave a message', href: '/#contact' },
-  { label: 'Send a mail', href: 'mailto:oncemorephotography@gmail.com' },
-  { label: 'Give us a call', href: 'tel:+919677006647' },
-];
-
 const otherPages = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/#about' },
-  { label: 'Wedding Films', href: '/#wedding-film' },
-  { label: 'Live Streaming', href: '/#live-streaming' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Services', href: '/#services' },
   { label: 'Contact Us', href: '/#contact' },
 ];
 
@@ -36,6 +30,22 @@ const socials = [
 
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null);
+  const [formState, setFormState] = useState({ name: '', email: '', phone: '', message: '' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate API request
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      setFormState({ name: '', email: '', phone: '', message: '' });
+      // Reset success message after 5 seconds
+      setTimeout(() => setSubmitted(false), 5000);
+    }, 1200);
+  };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -70,19 +80,73 @@ export default function Footer() {
           Let us capture the best moments in your life for you
         </h3>
         <p className="footer-animate text-body-l text-warm-white/60 text-center mt-4">
-          If you are looking to work with us please refer one of the following methods to contact us.
+          Fill out the form below or reach out via email/phone, and we will get back to you shortly.
         </p>
-        <div className="footer-animate flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-12">
-          {contactButtons.map((btn) => (
-            <a
-              key={btn.label}
-              href={btn.href}
-              className="w-full sm:w-auto min-w-[220px] text-center border border-warm-champagne/40 text-warm-cream px-10 py-4 text-cta uppercase font-body transition-all duration-300 hover:border-warm-champagne hover:text-warm-champagne"
-            >
-              {btn.label}
-            </a>
-          ))}
-        </div>
+        
+        {/* Contact Form */}
+        <form onSubmit={handleSubmit} className="footer-animate max-w-[600px] mx-auto mt-12 space-y-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="flex flex-col items-start w-full">
+              <label htmlFor="name" className="text-caption text-warm-champagne mb-2">Name</label>
+              <input
+                type="text"
+                id="name"
+                required
+                value={formState.name}
+                onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+                placeholder="Your Name"
+                className="w-full bg-pure-black border border-warm-champagne/20 text-warm-cream px-4 py-3 focus:outline-none focus:border-warm-champagne focus:ring-1 focus:ring-warm-champagne transition-all duration-300 rounded"
+              />
+            </div>
+            <div className="flex flex-col items-start w-full">
+              <label htmlFor="email" className="text-caption text-warm-champagne mb-2">Email</label>
+              <input
+                type="email"
+                id="email"
+                required
+                value={formState.email}
+                onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+                placeholder="Your Email"
+                className="w-full bg-pure-black border border-warm-champagne/20 text-warm-cream px-4 py-3 focus:outline-none focus:border-warm-champagne focus:ring-1 focus:ring-warm-champagne transition-all duration-300 rounded"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col items-start w-full">
+            <label htmlFor="phone" className="text-caption text-warm-champagne mb-2">Phone</label>
+            <input
+              type="tel"
+              id="phone"
+              value={formState.phone}
+              onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
+              placeholder="Your Phone Number"
+              className="w-full bg-pure-black border border-warm-champagne/20 text-warm-cream px-4 py-3 focus:outline-none focus:border-warm-champagne focus:ring-1 focus:ring-warm-champagne transition-all duration-300 rounded"
+            />
+          </div>
+          <div className="flex flex-col items-start w-full">
+            <label htmlFor="message" className="text-caption text-warm-champagne mb-2">Message</label>
+            <textarea
+              id="message"
+              required
+              rows={4}
+              value={formState.message}
+              onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+              placeholder="How can we help you?"
+              className="w-full bg-pure-black border border-warm-champagne/20 text-warm-cream px-4 py-3 focus:outline-none focus:border-warm-champagne focus:ring-1 focus:ring-warm-champagne transition-all duration-300 rounded resize-none"
+            />
+          </div>
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full text-center border border-warm-champagne text-warm-champagne px-10 py-4 text-cta uppercase font-body transition-all duration-300 hover:bg-warm-champagne hover:text-pure-black disabled:opacity-50"
+          >
+            {isSubmitting ? 'Sending...' : 'Send Message'}
+          </button>
+          {submitted && (
+            <p className="text-center text-warm-champagne text-body-l mt-4 animate-fade-in">
+              Thank you! Your message has been sent successfully. We'll be in touch!
+            </p>
+          )}
+        </form>
       </div>
 
       {/* Footer Info Grid */}

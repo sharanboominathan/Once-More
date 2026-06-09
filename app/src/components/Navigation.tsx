@@ -3,13 +3,9 @@ import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'About Us', href: '/#about' },
+  { label: 'About Us', href: '/about' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Services', href: '/#services' },
-  { label: 'Wedding Film', href: '/#wedding-film' },
-  { label: 'Live Streaming', href: '/#live-streaming' },
-  { label: 'Blog', href: '#' },
-  { label: 'Careers', href: '#' },
   { label: 'Contact Us', href: '/#contact' },
 ];
 
